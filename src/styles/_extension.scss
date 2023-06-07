@@ -1,0 +1,60 @@
+@use 'variaveis';
+
+.extension {
+    padding-top: 5vw;
+    
+        &__container {
+            width: 1300px;
+            max-width: 100%;
+            margin: 0 auto;
+            
+            @media (max-width: 767px) {
+                max-width: 90%;
+        }
+        }
+        
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+            align-items: center;
+    
+            
+            @media (max-width: 767px) {
+                display: block;
+    
+                img {
+                    width: 80%;
+                    margin-left: 40px;
+                }
+            }
+            @media (min-width: 768px) and (max-width: 1023px) {
+                width: 90%;
+            }
+        }
+
+    &__text {
+        color: variaveis.$secTextColor;
+        text-align: right;
+        font-size: 32px;
+
+        
+        @media (max-width: 767px) {
+            text-align: center;
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 14px;
+            font-weight: 400;
+
+            @media (max-width: 767px) {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use 'variaveis';
+
+.community {
+    padding-top: 16vw;
+    padding-bottom: 2.2vw;
+
+    &__container {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+
+    &__links {
+        display: flex;
+        text-align: center;
+        color: variaveis.$secTextColor;
+
+        @media (max-width: 768px) {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__item {
+        margin-top: 40px;
+
+        @media (max-width: 768px) {
+            margin-top: 8px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-weight: 400;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+                margin-top: px;
+            }
+        }
+        img {
+            width: 20%;
+            align-items: center;
+        }
+    }
+}
+

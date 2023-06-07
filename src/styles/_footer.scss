@@ -1,0 +1,24 @@
+@use 'variaveis';
+
+.footer {
+    background-color: lighten(variaveis.$bgColor, 2%);
+    padding: 16px;
+
+    &__container {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    p {
+        color: variaveis.$descTextColor;
+        @media (max-width: 767px) {
+            font-size: 8px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        justify-content: space-between;
+    }
+}

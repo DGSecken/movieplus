@@ -1,0 +1,47 @@
+@use 'header';
+@use 'variaveis';
+@use 'playing';
+@use 'popular';
+@use 'extension';
+@use 'community';
+@use 'footer';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Work Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: variaveis.$bgColor;
+}
+
+@mixin title--big($fontSize: 32px) {
+    font-size: $fontSize;
+    color: variaveis.$secTextColor;
+}
+
+@mixin title ($fontSize: 20px) {
+    font-size: $fontSize;
+    color: variaveis.$secTextColor;
+}
+
+@mixin desc ($fontSize: 14px) {
+    font-size: $fontSize;
+    color: variaveis.$descTextColor;
+}
+
+.title--big {
+    @include title--big;
+}
+
+.title {
+    @include title;
+}
+
+.desc {
+    @include desc;
+}

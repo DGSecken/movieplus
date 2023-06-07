@@ -1,0 +1,89 @@
+
+@use 'variaveis';
+
+
+.header {
+    background-color: lighten(variaveis.$bgColor, 2%);
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    @media (max-width: 767px) {
+        padding: 0px;
+        }
+
+    &__container {
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            @media (max-width: 767px) {
+                justify-content: center;
+        }
+    }
+
+    img {
+        width: 14%;
+
+        @media (max-width: 767px) {
+            width: 40%;
+            margin-left: 110px;
+        }
+
+        @media (min-width: 767px) and (max-width: 1023px) {
+            width: 25%;
+            margin-left: 300px;
+        }
+    }
+
+    &__links {
+        display: flex;
+    }
+
+
+
+    &__item {
+        margin: 0 12px;
+        font-size: 20px;
+        display: inline-block;
+        position: relative;
+        color: variaveis.$mainTextColor;
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: variaveis.$mainTextColor;
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: variaveis.$secTextColor;
+
+        @media (max-width: 767px) {
+            display: none;
+            }
+            @media (min-width: 768px) and (max-width: 1023px) {
+                display: none;
+            }
+            
+        }
+    }
